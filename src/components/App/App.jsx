@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import TestPage from '../TestPage/TestPage';
+import AddSpotForm from '../AddSpotForm/AddSpotForm';
 
 import './App.css';
 
@@ -67,6 +68,14 @@ function App() {
             path="/testPage"
           >
             <TestPage />
+          </ProtectedRoute>
+  /******************************* */
+  <ProtectedRoute
+            // logged in shows addPage else shows LoginPage
+            exact
+            path="/addSpotForm"
+          >
+            <AddSpotForm />
           </ProtectedRoute>
           
           
