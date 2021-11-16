@@ -24,7 +24,7 @@ router.get('/', rejectUnauthenticated, (req, res) => {
       res.send(response.rows); // response.rows contains all the items
     })
     .catch((error) => {
-      console.log(`There was an error with the /api/shelf GET:`, error);
+      console.log(`There was an error with the /api/userSkateSpot GET:`, error);
       res.sendStatus(500); // there was an error
     });
 });

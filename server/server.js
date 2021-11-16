@@ -25,6 +25,7 @@ app.use(passport.session());
 /* Routes */
 app.use('/api/user', userRouter);
 app.use('/api/skateSpots', userSkateRouter)
+// app.use('/api/addSkateSpot', userSkateRouter)
 
 // Serve static files
 app.use(express.static('build'));

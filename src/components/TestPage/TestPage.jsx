@@ -4,9 +4,11 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import Item from '../Item/Item';
 // import 
+import { useHistory } from "react-router-dom";
 
 function TestPage() {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const skateSpot = useSelector((store) => store.userSkateReducer);
 
@@ -15,9 +17,16 @@ function TestPage() {
     dispatch({ type: 'FETCH_ITEMS' });
   }, []);
 
+ 
+  const routeChange = () =>{ 
+    let path = `addSpotPage`; 
+    history.push(path);
+  }
+  
+
   return (
     <div className="container">
-      <button>Add New Skate Spot</button>
+      <button onClick={routeChange}>Add New Skate Spot</button>
       
       <h2>Your Skate Spots</h2>
 

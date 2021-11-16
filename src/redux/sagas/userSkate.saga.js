@@ -16,7 +16,7 @@ function* fetchItems(action) {
 function* addItem(action) {
     try {
         console.log('New Item', action.payload);
-        yield axios.post('/api/shelf', action.payload);
+        yield axios.post('/api/skateSpots', action.payload);
 
         yield put({ type: 'FETCH_ITEMS' })
     } catch (error) {
