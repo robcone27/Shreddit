@@ -12,7 +12,7 @@ import userSkateReducer from './userSkate.reducer';
 const rootReducer = combineReducers({
   errors, // contains registrationMessage and loginMessage
   user, // will have an id and username if someone is logged in
-  userSkateReducer,
+  userSkateReducer, //contains all item spots for user and shreddit community
 });
 
 export default rootReducer;
