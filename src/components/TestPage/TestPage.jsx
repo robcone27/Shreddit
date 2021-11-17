@@ -17,20 +17,25 @@ function TestPage() {
     dispatch({ type: 'FETCH_ITEMS' });
   }, []);
 
- 
-  const routeChange = () =>{ 
-    let path = `addSpotPage`; 
+  //delete user skate spot 
+  const handleDelete = (item) => {
+    dispatch({ type: 'DELETE_ITEM', payload: item })
+  }
+
+
+  const routeChange = () => {
+    let path = `addSpotPage`;
     history.push(path);
   }
-  
+
 
   return (
     <div className="container">
       <button onClick={routeChange}>Add New Skate Spot</button>
-      
+
       <h2>Your Skate Spots</h2>
 
-      
+
 
       {skateSpot.map((item) => (
         // <Item key={item.id} item={item} />
@@ -42,12 +47,10 @@ function TestPage() {
 
           <h3>Address</h3>
           <h4>{item.address}</h4>
+          <button onClick={() =>handleDelete(item)}>Delete</button>
         </div>
       ))}
 
-
-      {/* //add item to the shelf. KD */}
-      {/* <AddItemForm/> */}
     </div>
   );
 }
