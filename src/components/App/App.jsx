@@ -62,13 +62,13 @@ function App() {
             <UserPage />
           </ProtectedRoute>
 //********************** */
-<ProtectedRoute
+{/* <ProtectedRoute
             // logged in shows UserPage else shows LoginPage
             exact
             path="/testPage"
           >
             <TestPage />
-          </ProtectedRoute>
+          </ProtectedRoute> */}
   /******************************* */
   <ProtectedRoute
             // logged in shows addPage else shows LoginPage
