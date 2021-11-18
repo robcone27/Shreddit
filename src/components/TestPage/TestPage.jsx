@@ -53,6 +53,7 @@ function TestPage() {
 
           <button onClick={() =>handleDelete(item)}>Delete</button>
           <img onClick={() =>toEditPage(item)} src={item.image_url} alt={item.comments} />
+          {/* <img onClick={() =>toEditPage(item)} src={item.image_url} alt={item.comments} /> */}
         </div>
       ))}
 
