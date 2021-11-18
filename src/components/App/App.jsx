@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import TestPage from '../TestPage/TestPage';
 import AddSpotPage from '../AddSpotPage/AddSpotPage';
+import EditPage from '../EditPage/EditPage';
 
 import './App.css';
 
@@ -62,13 +63,13 @@ function App() {
             <UserPage />
           </ProtectedRoute>
 //********************** */
-{/* <ProtectedRoute
+<ProtectedRoute
             // logged in shows UserPage else shows LoginPage
             exact
-            path="/testPage"
+            path="/editPage"
           >
-            <TestPage />
-          </ProtectedRoute> */}
+            <EditPage />
+          </ProtectedRoute>
   /******************************* */
   <ProtectedRoute
             // logged in shows addPage else shows LoginPage
@@ -143,3 +144,4 @@ function App() {
 }
 
 export default App;
+

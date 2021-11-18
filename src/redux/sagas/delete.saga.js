@@ -7,7 +7,7 @@ function* deleteItem(action) {
         console.log(action.payload)
         yield axios.delete(`/api/skateSpots/${action.payload.id}`)
         // console.log(action.payload)
-        //Call FETCH_ITEMS to rerender page
+        //Call FETCH_ITEMS to rerender page 
         yield put({type: 'FETCH_ITEMS'})
     } catch (err) {
         console.log('Error in deleteItem', err);

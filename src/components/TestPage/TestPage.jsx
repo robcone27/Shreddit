@@ -27,7 +27,10 @@ function TestPage() {
     let path = `addSpotPage`;
     history.push(path);
   }
-
+  const toDetailsPage = () => {
+    dispatch({ type: 'SET_SELECTED_MOVIE', payload: movie });
+    history.push('/editPage')
+}
 
   return (
     <div className="container">
