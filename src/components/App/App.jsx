@@ -83,7 +83,7 @@ function App() {
           <ProtectedRoute
             // logged in shows addPage else shows LoginPage
             exact
-            path="/updateForm/item_id"
+            path="/updateForm/:item_id"
           >
             <UpdateForm />
           </ProtectedRoute>

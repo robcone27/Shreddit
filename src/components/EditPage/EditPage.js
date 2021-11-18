@@ -6,25 +6,36 @@ import { useDispatch, useSelector } from 'react-redux';
 // import 
 import { useHistory } from "react-router-dom";
 
-function EditPage(){
+function EditPage() {
     const history = useHistory();
-    const itemDetails = useSelector(store => store.editReducer)
+    const itemDetails = useSelector(store => store.selectedReducer)
+    const dispatch = useDispatch();
 
     console.log(itemDetails)
+
+     //delete user skate spot 
+//   const handleDelete = (item) => {
+//     dispatch({ type: 'DELETE_ITEM', payload: item })
+//   }
+
+
     return (
 
 
         <div>
-        <h3>Address</h3>
-        <h4>{itemDetails.address}</h4>
+            <h3>Address</h3>
+            <h4>{itemDetails.address}</h4>
 
-        <img src={itemDetails.image_url}/>
-       
-       <h3>Comments</h3>
-        <h4>{itemDetails.comments}</h4>
-<button onCLick={() => history.push(`/updateForm/${itemDetails.id}`)}>Update</button>
+            <img src={itemDetails.image_url} />
+
+            <h3>Comments</h3>
+            <h4>{itemDetails.comments}</h4>
+            <button onClick={() => {history.push(`/updateForm/${itemDetails.id}`)
+            }}>Update</button>
+                {/* <button onClick={() =>handleDelete(item)}>Delete</button> */}
+                
         </div>
-        
+
     )
 }
 
