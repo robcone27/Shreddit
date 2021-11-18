@@ -7,6 +7,7 @@ const {
     rejectUnauthenticated,
 } = require('../modules/authentication-middleware');
 
+
 /**
  * Get all of the items on the shelf
  */

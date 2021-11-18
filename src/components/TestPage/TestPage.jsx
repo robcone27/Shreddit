@@ -27,8 +27,9 @@ function TestPage() {
     let path = `addSpotPage`;
     history.push(path);
   }
-  const toDetailsPage = () => {
-    dispatch({ type: 'SET_SELECTED_MOVIE', payload: movie });
+  const toEditPage = (item) => {
+    console.log('clicked me', item)
+    dispatch({ type: 'SET_SELECTED_ITEM', payload: item });
     history.push('/editPage')
 }
 
@@ -45,12 +46,13 @@ function TestPage() {
         <div>
           <img src={item.image_url} alt="skate spot pic" />
 
-          {/* <h3>Comment</h3> */}
           <h4>{item.comments}</h4>
 
           <h3>Address</h3>
           <h4>{item.address}</h4>
+
           <button onClick={() =>handleDelete(item)}>Delete</button>
+          <img onClick={() =>toEditPage(item)} src={item.image_url} alt={item.comments} />
         </div>
       ))}
 
