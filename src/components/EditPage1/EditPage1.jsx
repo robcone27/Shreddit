@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 // import 
 import { useHistory } from "react-router-dom";
 
-function EditPage() {
+function EditPage1() {
     const history = useHistory();
     const itemDetails = useSelector(store => store.selectedReducer)
     const dispatch = useDispatch();
@@ -15,7 +15,7 @@ function EditPage() {
 
     //delete user skate spot 
     const handleDelete = (itemDetails) => {
-        dispatch({ type: 'DELETE_ITEM', payload: item })
+        dispatch({ type: 'DELETE_ITEM', payload: itemDetails })
       }
 
     return (
@@ -40,4 +40,4 @@ function EditPage() {
 
 
 
-export default EditPage;
+export default EditPage1;

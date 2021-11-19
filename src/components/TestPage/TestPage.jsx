@@ -1,9 +1,7 @@
 import React from 'react';
-// import AddItemForm from '../AddItemForm/AddItemForm';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import Item from '../Item/Item';
-// import 
+import './TestPage.css';
 import { useHistory } from "react-router-dom";
 
 function TestPage() {
@@ -20,9 +18,9 @@ function TestPage() {
   }, []);
 
   //delete user skate spot 
-  const handleDelete = (item) => {
-    dispatch({ type: 'DELETE_ITEM', payload: item })
-  }
+  // const handleDelete = (item) => {
+  //   dispatch({ type: 'DELETE_ITEM', payload: item })
+  // }
 
 
   const routeChange = () => {
@@ -57,6 +55,9 @@ function TestPage() {
           <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
           <h4>{item.comments}</h4>
           <button onClick={() => handleDelete(item)}>Delete</button>
+          
+          
+          
           {/* <h3>Address</h3>
           <h4>{item.address}</h4>
           <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
