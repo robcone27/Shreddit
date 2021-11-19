@@ -23,6 +23,7 @@ import TestPage from '../TestPage/TestPage';
 import AddSpotPage from '../AddSpotPage/AddSpotPage';
 import EditPage from '../EditPage/EditPage';
 import UpdateForm from '../UpdateForm/UpdateForm';
+import AllSkatePage from '../AllSkatePage/AllSkatePage';
 
 import './App.css';
 
@@ -80,7 +81,15 @@ function App() {
             <AddSpotPage />
           </ProtectedRoute>
 
-          
+          <ProtectedRoute
+            // logged in shows addPage else shows LoginPage
+            exact
+            path="/allSkatePage"
+          >
+            <AllSkatePage />
+          </ProtectedRoute>
+
+
 
           <ProtectedRoute
             // logged in shows addPage else shows LoginPage
