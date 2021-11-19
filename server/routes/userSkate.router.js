@@ -13,7 +13,7 @@ const {
  */
 // this is actually /api/shelf
 router.get('/', rejectUnauthenticated, (req, res) => {
-
+console.log(req.user);
     let queryText = `SELECT * FROM "item";`;
 
     //this is where i need to change querytext to show individual 

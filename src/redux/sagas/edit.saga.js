@@ -19,7 +19,6 @@ function* editSaga(action) {
 }
 
 function* updateItem(action) {
-  console.log('L;KASDJFLKASDJF',action.payload)
     try{
     yield axios.put(`/api/editPage/${action.payload.item_id}`, action.payload.updateItem)
     yield put({ type: 'FETCH_ITEM' });

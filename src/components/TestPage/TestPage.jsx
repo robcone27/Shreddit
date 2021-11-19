@@ -44,7 +44,7 @@ function TestPage() {
       {skateSpot.map((item) => (
         // <Item key={item.id} item={item} />
         <div>
-          <img src={item.image_url} alt="skate spot pic" />
+          {/* <img src={item.image_url} alt="skate spot pic" /> */}
 
           <h4>{item.comments}</h4>
 
@@ -53,7 +53,7 @@ function TestPage() {
 
           <button onClick={() =>handleDelete(item)}>Delete</button>
           <img onClick={() =>toEditPage(item)} src={item.image_url} alt={item.comments} />
-          {/* <img onClick={() =>toEditPage(item)} src={item.image_url} alt={item.comments} /> */}
+        
         </div>
       ))}
 
