@@ -11,10 +11,12 @@ function TestPage() {
   const history = useHistory();
 
   const skateSpot = useSelector((store) => store.userSkateReducer);
+  const allSkate = useSelector((store) => store.allSkateReducer);
+
 
   //get user skate spots from db
   useEffect(() => {
-    dispatch({ type: 'FETCH_ITEMS' });
+    dispatch({ type: 'FETCH_USER_ITEMS' });
   }, []);
 
   //delete user skate spot 
@@ -41,7 +43,7 @@ function TestPage() {
 
 
 
-      {skateSpot.map((item) => (
+      {allSkate.map((item) => (
         // <Item key={item.id} item={item} />
         <div>
           {/* <img src={item.image_url} alt="skate spot pic" /> */}

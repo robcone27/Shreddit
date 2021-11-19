@@ -4,6 +4,8 @@ import user from './user.reducer';
 import userSkateReducer from './userSkate.reducer';
 import editReducer from './edit.reducer';
 import selectedReducer from './selectedItem.reducer';
+import allSkateReducer from './allSkate.reducer';
+
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -17,6 +19,7 @@ const rootReducer = combineReducers({
   userSkateReducer, //contains all item spots for user and shreddit community
   editReducer,
   selectedReducer,
+  allSkateReducer,
 });
 
 export default rootReducer;

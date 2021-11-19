@@ -11,6 +11,7 @@ const passport = require('./strategies/user.strategy');
 const userRouter = require('./routes/user.router');
 const userSkateRouter = require('./routes/userSkate.router')
 const editRouter = require('./routes/edit.router')
+const allSkateRouter = require('./routes/allSkate.router')
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -27,6 +28,7 @@ app.use(passport.session());
 app.use('/api/user', userRouter);
 app.use('/api/skateSpots', userSkateRouter)
 app.use('/api/editPage', editRouter)
+app.use('/api/allSkate', allSkateRouter )
 // app.use('/api/addSkateSpot', userSkateRouter)
 
 // Serve static files

@@ -80,6 +80,8 @@ function App() {
             <AddSpotPage />
           </ProtectedRoute>
 
+          
+
           <ProtectedRoute
             // logged in shows addPage else shows LoginPage
             exact
