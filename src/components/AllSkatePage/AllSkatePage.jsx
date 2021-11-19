@@ -1,15 +1,13 @@
 import React from 'react';
-// import AddItemForm from '../AddItemForm/AddItemForm';
+// import {useSelector} from 'react-redux';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import Item from '../Item/Item';
-// import 
 import { useHistory } from "react-router-dom";
 
 function AllSkatePage() {
     const dispatch = useDispatch();
     const history = useHistory();
-
+    // const user = useSelector((store) => store.user);
     const skateSpot = useSelector((store) => store.userSkateReducer);
     //   const allSkate = useSelector((store) => store.allSkateReducer);
 
@@ -46,6 +44,7 @@ function AllSkatePage() {
             {skateSpot.map((item) => (
                 // <Item key={item.id} item={item} />
                 <div>
+                    {/* <h2>Welcome, {user.username}</h2> */}
                     <h3>Address</h3>
                     <h4>{item.address}</h4>
 

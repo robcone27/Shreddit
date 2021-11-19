@@ -33,7 +33,7 @@ function TestPage() {
     console.log('clicked me', item)
     dispatch({ type: 'SET_SELECTED_ITEM', payload: item });
     history.push('/editPage')
-}
+  }
 
   return (
     <div className="container">
@@ -47,15 +47,20 @@ function TestPage() {
         // <Item key={item.id} item={item} />
         <div>
           {/* <img src={item.image_url} alt="skate spot pic" /> */}
+          {/* 
+          <h4>{item.comments}</h4> */}
 
-          <h4>{item.comments}</h4>
-
+          {/* <h3>Address</h3>
+          <h4>{item.address}</h4> */}
           <h3>Address</h3>
           <h4>{item.address}</h4>
-
-          <button onClick={() =>handleDelete(item)}>Delete</button>
-          <img onClick={() =>toEditPage(item)} src={item.image_url} alt={item.comments} />
-        
+          <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
+          <h4>{item.comments}</h4>
+          <button onClick={() => handleDelete(item)}>Delete</button>
+          {/* <h3>Address</h3>
+          <h4>{item.address}</h4>
+          <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
+          <h4>{item.comments}</h4> */}
         </div>
       ))}
 

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { put, takeLatest } from 'redux-saga/effects';
 
-//saga GET from server
+//saga GET from user info from server
 function* fetchItems(action) {
     try {
         const response = yield axios.get('/api/skateSpots');
@@ -12,6 +12,16 @@ function* fetchItems(action) {
     }
 }
 
+//saga GET from all user info from server
+// function* fetchUserItems(action) {
+//     try {
+//         const response = yield axios.get('/api/skateSpots');
+//         yield put({ type: 'FETCH_ITEMS', payload: response.data });
+//     } catch (err) {
+//         yield put({ type: 'FETCH_ITEMS_ERROR' });
+//         console.log(err);
+//     }
+// }
 //saga POST to server
 function* addItem(action) {
     try {
@@ -42,8 +52,9 @@ function* addItem(action) {
 
 
  function* userSkateSaga() {
-    yield takeLatest('FETCH_ITEMS', fetchItems)
+    yield takeLatest('FETCH_ITEMS', fetchItems);
     yield takeLatest('ADD_ITEM', addItem);
+    // yield takeLatest('FETCH_ITEMS', fetchUserItems);
 }
 
 export default userSkateSaga;
