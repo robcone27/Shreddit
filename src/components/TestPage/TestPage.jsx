@@ -54,7 +54,7 @@ function TestPage() {
           <h4>{item.address}</h4>
           <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
           <h4>{item.comments}</h4>
-          <button onClick={() => handleDelete(item)}>Delete</button>
+          {/* <button onClick={() => handleDelete(item)}>Delete</button> */}
           
           
           

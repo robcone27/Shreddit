@@ -11,12 +11,13 @@ function EditPage1() {
     const itemDetails = useSelector(store => store.selectedReducer)
     const dispatch = useDispatch();
 
-    console.log(itemDetails)
 
-    //delete user skate spot 
+    //delete user skate spot and return to home page 
     const handleDelete = (itemDetails) => {
         dispatch({ type: 'DELETE_ITEM', payload: itemDetails })
-      }
+        let path = `/home`;
+        history.push(path);
+    }
 
     return (
 
@@ -29,10 +30,11 @@ function EditPage1() {
 
             <h3>Comments</h3>
             <h4>{itemDetails.comments}</h4>
-            <button onClick={() => {history.push(`/updateForm/${itemDetails.id}`)
+            <button onClick={() => {
+                history.push(`/updateForm/${itemDetails.id}`)
             }}>Update</button>
-                <button onClick={() =>handleDelete(itemDetails)}>Delete</button>
-                
+            <button onClick={() => handleDelete(itemDetails)}>Delete</button>
+
         </div>
 
     )

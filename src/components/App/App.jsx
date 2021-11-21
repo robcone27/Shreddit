@@ -22,7 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import TestPage from '../TestPage/TestPage';
 import AddSpotPage from '../AddSpotPage/AddSpotPage';
 // import EditPage from '../EditPage/EditPage';
-import EditPage from '../EditPage/EditPage';
+// import EditPage from '../EditPage/EditPage';
 import UpdateForm from '../UpdateForm/UpdateForm';
 import AllSkatePage from '../AllSkatePage/AllSkatePage';
 import EditPage1 from '../EditPage1/EditPage1';

@@ -16,10 +16,10 @@ function UpdateForm() {
         address: '',
     });
 
-      //delete user skate spot 
-  const handleDelete = (item) => {
-    dispatch({ type: 'DELETE_ITEM', payload: item })
-  }
+//       //delete user skate spot 
+//   const handleDelete = (item) => {
+//     dispatch({ type: 'DELETE_ITEM', payload: item })
+//   }
 
     const { item_id } = useParams();
     console.log(item_id);
@@ -36,7 +36,7 @@ function UpdateForm() {
         console.log(`clicked, added a new item`);
     };
 
-
+// change path on cancel back to home page 
     const routeChange = () => {
         let path = `/home`;
         history.push(path);
