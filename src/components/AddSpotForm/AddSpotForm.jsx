@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 function AddSpotForm() {
 
@@ -55,9 +56,10 @@ function AddSpotForm() {
                 value={newItem.address}
                 onChange={(event) => handlePropertyChange(event, 'address')}
             />
-           
-            <Button variant="contained" type="submit">Add Skate Spot</Button>
+            <Stack spacing={2} direction="row">
+            <Button variant="contained" type="submit">Add Spot</Button>
             <Button variant="contained" onClick={routeChange}>Cancel</Button>
+            </Stack>
         </form>
 
     </>

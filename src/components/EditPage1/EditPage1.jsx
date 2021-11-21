@@ -2,6 +2,8 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
 
 function EditPage1() {
     const history = useHistory();
@@ -25,7 +27,9 @@ function EditPage1() {
 
     return (<>
 
-        <button onClick={routeChange}>Back</button>
+     
+        <Button variant="contained" onClick={routeChange}>Back</Button>
+            
 
         <div>
 
@@ -36,11 +40,14 @@ function EditPage1() {
 
             <h3>Comments</h3>
             <h4>{itemDetails.comments}</h4>
-            <button onClick={() => {
-                history.push(`/updateForm/${itemDetails.id}`)
-            }}>Update</button>
-            <button onClick={() => handleDelete(itemDetails)}>Delete</button>
 
+              <Stack spacing={12} direction="row">  
+            <Button variant="contained" onClick={() => {
+                history.push(`/updateForm/${itemDetails.id}`)
+            }}>Update</Button>
+
+            <Button variant="contained" onClick={() => handleDelete(itemDetails)}>Delete</Button>
+            </Stack>
         </div>
     </>
 
