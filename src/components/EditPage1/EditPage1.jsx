@@ -1,9 +1,6 @@
 import React from 'react';
-// import AddItemForm from '../AddItemForm/AddItemForm';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import Item from '../Item/Item';
-// import 
 import { useHistory } from "react-router-dom";
 
 function EditPage1() {
@@ -14,6 +11,7 @@ function EditPage1() {
 
     //delete user skate spot and return to home page 
     const handleDelete = (itemDetails) => {
+        confirm("Do you want to delete this spot?")
         dispatch({ type: 'DELETE_ITEM', payload: itemDetails })
         let path = `/home`;
         history.push(path);

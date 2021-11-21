@@ -32,9 +32,11 @@ function UpdateForm() {
     // //function to send new item to the saga, then to the reducer
     const runUpdateItem = (event) => {
         event.preventDefault();
+        let path = `/home`;
         dispatch({ type: 'UPDATE_ITEM', payload: {updateItem, item_id} });
         console.log(`clicked, added a new item`);
-    };
+        history.push(path);
+       };
 
 // change path on cancel back to home page 
     const routeChange = () => {
