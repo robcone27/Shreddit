@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 function AddSpotForm() {
 
@@ -23,8 +24,10 @@ function AddSpotForm() {
     //function to send new item to the saga, then to the reducer
     const addNewItem = (event) => {
         event.preventDefault();
+        let path = `/home`;
         dispatch({ type: 'ADD_ITEM', payload: newItem });
         console.log(`clicked, added a new item`);
+        history.push(path);
     };
 
     const routeChange = () => {
@@ -52,8 +55,9 @@ function AddSpotForm() {
                 value={newItem.address}
                 onChange={(event) => handlePropertyChange(event, 'address')}
             />
-            <button type="submit">Add Skate Spot</button>
-            <button onClick={routeChange}>Cancel</button>
+           
+            <Button variant="contained" type="submit">Add Skate Spot</Button>
+            <Button variant="contained" onClick={routeChange}>Cancel</Button>
         </form>
 
     </>
