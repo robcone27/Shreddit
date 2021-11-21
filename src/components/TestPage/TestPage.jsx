@@ -1,8 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './TestPage.css';
+// import './TestPage.css';
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 function TestPage() {
   const dispatch = useDispatch();
@@ -35,7 +36,8 @@ function TestPage() {
 
   return (
     <div className="container">
-      <button onClick={routeChange}>Add New Skate Spot</button>
+      {/* <button onClick={routeChange}>Add New Skate Spot</button> */}
+      <Button variant="contained" onClick={routeChange}>Add New Skate Spot</Button>
 
       <h2>Your Skate Spots</h2>
 
