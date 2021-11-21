@@ -17,10 +17,18 @@ function EditPage1() {
         history.push(path);
     }
 
-    return (
+    // change path on cancel back to home page 
+    const routeChange = () => {
+        let path = `/home`;
+        history.push(path);
+    }
 
+    return (<>
+
+        <button onClick={routeChange}>Back</button>
 
         <div>
+
             <h3>Address</h3>
             <h4>{itemDetails.address}</h4>
 
@@ -34,6 +42,7 @@ function EditPage1() {
             <button onClick={() => handleDelete(itemDetails)}>Delete</button>
 
         </div>
+    </>
 
     )
 }
