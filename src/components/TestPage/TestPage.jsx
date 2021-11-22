@@ -4,6 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 // import './TestPage.css';
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
+// import Card from '@mui/material/Card';
+// import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Typography from '@mui/material/Typography';
 
 function TestPage() {
   const dispatch = useDispatch();
@@ -17,11 +22,6 @@ function TestPage() {
   useEffect(() => {
     dispatch({ type: 'FETCH_USER_ITEMS' });
   }, []);
-
-  //delete user skate spot 
-  // const handleDelete = (item) => {
-  //   dispatch({ type: 'DELETE_ITEM', payload: item })
-  // }
 
 
   const routeChange = () => {
@@ -44,26 +44,14 @@ function TestPage() {
 
 
       {allSkate.map((item) => (
-        // <Item key={item.id} item={item} />
+   
         <div>
-          {/* <img src={item.image_url} alt="skate spot pic" /> */}
-          {/* 
-          <h4>{item.comments}</h4> */}
-
-          {/* <h3>Address</h3>
-          <h4>{item.address}</h4> */}
+         
           <h3>Address</h3>
           <h4>{item.address}</h4>
           <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
           <h4>{item.comments}</h4>
-          {/* <button onClick={() => handleDelete(item)}>Delete</button> */}
           
-          
-          
-          {/* <h3>Address</h3>
-          <h4>{item.address}</h4>
-          <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
-          <h4>{item.comments}</h4> */}
         </div>
       ))}
 

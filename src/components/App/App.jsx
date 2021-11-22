@@ -21,11 +21,11 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import TestPage from '../TestPage/TestPage';
 import AddSpotPage from '../AddSpotPage/AddSpotPage';
-// import EditPage from '../EditPage/EditPage';
-// import EditPage from '../EditPage/EditPage';
 import UpdateForm from '../UpdateForm/UpdateForm';
 import AllSkatePage from '../AllSkatePage/AllSkatePage';
 import EditPage1 from '../EditPage1/EditPage1';
+import FunTimes from '../FunTimes/FunTimes';
+
 
 import './App.css';
 
@@ -90,6 +90,14 @@ function App() {
           >
             <AllSkatePage />
           </ProtectedRoute>
+ //******************************************** */    
+ <ProtectedRoute
+            // logged in shows addPage else shows LoginPage
+            exact
+            path="/funTimes"
+          >
+            <FunTimes />
+          </ProtectedRoute>     
 
 
 
