@@ -35,7 +35,7 @@ function TestPage() {
   }
 
   return (
-    <div className="container">
+    <div>
       {/* <button onClick={routeChange}>Add New Skate Spot</button> */}
       <Button variant="contained" onClick={routeChange}>Add New Skate Spot</Button>
 

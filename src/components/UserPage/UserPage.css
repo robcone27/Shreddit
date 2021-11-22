@@ -1,8 +1,26 @@
 /* body {
     background-color: red;
 }    */
+ 
+.container {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /* border-bottom-color: red;
+    border-bottom: 20px; */
+    /* border-bottom: 6px solid black; */
+    border-top: 6px solid red;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
+         margin-bottom: 20px;
+         background-color: dimgrey;
+} 
 
-/* .container {
-    padding: 10px 0px 0px 0px;
+.welcomeName {
+    text-align: center;
   
-} */
+}
+
+.userFeed {
+   padding: 20px; 
+}

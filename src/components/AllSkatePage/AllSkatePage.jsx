@@ -34,7 +34,7 @@ function AllSkatePage() {
     // }
 
     return (
-        <div className="container">
+        <div>
             {/* <button onClick={routeChange}>Add New Skate Spot</button> */}
 
             <h2>Your Skate Feed</h2>

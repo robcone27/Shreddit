@@ -25,10 +25,12 @@ function AddSpotForm() {
     //function to send new item to the saga, then to the reducer
     const addNewItem = (event) => {
         event.preventDefault();
+        const response = confirm("Do you want to add a new spot?")
+        if (response === true){
         let path = `/home`;
         dispatch({ type: 'ADD_ITEM', payload: newItem });
         console.log(`clicked, added a new item`);
-        history.push(path);
+        history.push(path);}
     };
 
     const routeChange = () => {
