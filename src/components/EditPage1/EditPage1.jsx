@@ -13,10 +13,11 @@ function EditPage1() {
 
     //delete user skate spot and return to home page 
     const handleDelete = (itemDetails) => {
-        confirm("Do you want to delete this spot?")
+      const response = confirm("Do you want to delete this spot?")
+      if (response === true){
         dispatch({ type: 'DELETE_ITEM', payload: itemDetails })
         let path = `/home`;
-        history.push(path);
+        history.push(path);}
     }
 
     // change path on cancel back to home page 
@@ -38,7 +39,14 @@ function EditPage1() {
 
             <img src={itemDetails.image_url} />
 
-            <h3>Comments</h3>
+            {/* <Stack spacing={12} direction="row">  
+            <Button variant="contained" onClick={() => {
+                history.push(`/updateForm/${itemDetails.id}`)
+            }}>Update</Button>
+
+            <Button variant="contained" onClick={() => handleDelete(itemDetails)}>Delete</Button>
+            </Stack>
+            <h3>Comments</h3> */}
             <h4>{itemDetails.comments}</h4>
 
               <Stack spacing={12} direction="row">  

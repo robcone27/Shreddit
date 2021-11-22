@@ -56,7 +56,7 @@ function AddSpotForm() {
                 value={newItem.address}
                 onChange={(event) => handlePropertyChange(event, 'address')}
             />
-            <Stack spacing={2} direction="row">
+            <Stack spacing={8} direction="row">
             <Button variant="contained" type="submit">Add Spot</Button>
             <Button variant="contained" onClick={routeChange}>Cancel</Button>
             </Stack>
