@@ -20,9 +20,10 @@ function* editSaga(action) {
 
 function* updateItem(action) {
     try{
-    yield axios.put(`/api/editPage/${action.payload.item_id}`, action.payload.updateItem)
+    yield axios.put(`/api/editPage/${action.payload.id}`, action.payload)
     yield put({ type: 'FETCH_ITEM' });
 }catch (err) {
+    
     console.log('PUT error in saga', err)
 }
 }

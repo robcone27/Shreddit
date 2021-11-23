@@ -39,7 +39,7 @@ function AddSpotForm() {
     }
 
     return (<>
-        <form onSubmit={addNewItem}>
+        <form nameClass="formPanel" onSubmit={addNewItem}>
             <input
                 placeholder="comments"
                 type="text"

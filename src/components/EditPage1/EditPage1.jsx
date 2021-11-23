@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
@@ -9,6 +9,7 @@ function EditPage1() {
     const history = useHistory();
     const itemDetails = useSelector(store => store.selectedReducer)
     const dispatch = useDispatch();
+    // const [spot, setSpot] = useState(itemDetails)
 
 
     //delete user skate spot and return to home page 
@@ -25,7 +26,7 @@ function EditPage1() {
         let path = `/home`;
         history.push(path);
     }
-
+console.log(itemDetails)
     return (<>
 
      

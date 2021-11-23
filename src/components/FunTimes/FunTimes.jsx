@@ -58,12 +58,18 @@ function FunTimes() {
 
 
                     <Card sx={{ maxWidth: 400 }}>
+                    <CardActions>
+                    
+                    {/* <Button size="small">Share</Button>
+                    <Button size="small">Learn More</Button> */}
+                </CardActions>
                         <CardMedia
                             component="img"
                             height="200"
                             image={item.image_url} onClick={() => toEditPage(item)}
                             alt="skate spot"
                         />
+                        
                         <CardContent className="skateCard">
                             <Typography className="skateColor1" variant="body2" >
                                 Address
@@ -78,9 +84,9 @@ function FunTimes() {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            {/* onClick={() => toEditPage(item)} */}
-                            <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button>
+                    
+                            {/* <Button size="small">Share</Button>
+                            <Button size="small">Learn More</Button> */}
                         </CardActions>
                     </Card>
 

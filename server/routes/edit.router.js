@@ -25,6 +25,7 @@ router.get('/:id', (req, res) => {
   router.put('/:updateItem', (req, res) => {
       const updateItem = req.params.updateItem
     console.log('Req.body', req.body);
+    console.log(updateItem)
 
     const queryText = `
     UPDATE item 
