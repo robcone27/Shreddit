@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import './AddSpotForm.css';
 
 function AddSpotForm() {
 
@@ -39,7 +40,8 @@ function AddSpotForm() {
     }
 
     return (<>
-        <form nameClass="formPanel" onSubmit={addNewItem}>
+    <div className="formPanel">
+        <form onSubmit={addNewItem}>
             <input
                 placeholder="comments"
                 type="text"
@@ -63,7 +65,7 @@ function AddSpotForm() {
             <Button variant="contained" onClick={routeChange}>Cancel</Button>
             </Stack>
         </form>
-
+</div>
     </>
     )
 }
