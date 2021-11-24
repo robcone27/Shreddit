@@ -46,9 +46,9 @@ function AddSpotForm() {
 
     return (<>
         <div>
-            {/* <div className="formPanel"> */}
-
+   
             <form onSubmit={addNewItem}>
+           
                 <div className="test">
                 <TextField fullWidth label="Comments" id="fullWidth" variant="filled"
                         // placeholder="comments"
@@ -80,11 +80,16 @@ function AddSpotForm() {
                 <div className="addSpotFormButtons">
                     {/* <Stack spacing={8} direction="row">  */}
                         <Button variant="contained" type="submit">Add Spot</Button>
+                        </div>
+
+                        <div className="addSpotFormButtons">
                         <Button variant="contained" onClick={routeChange}>Cancel</Button>
                     {/* </Stack> */}
                 </div>
             </form>
+   \
         </div>
+       
     </>
     );
 }

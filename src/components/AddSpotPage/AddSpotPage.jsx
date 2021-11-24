@@ -4,16 +4,17 @@ import React from 'react';
 import AddSpotForm from '../AddSpotForm/AddSpotForm';
 import './AddSpotPage.css';
 
-function AddSpotPage(){
+function AddSpotPage() {
 
-return(
-    <>
-    <div>
-    <h2 className="yeah">Add Skate Spot</h2>
-    </div>
-    <AddSpotForm />
-    </>
-)
+    return (
+        <>
+            <div className></div>
+            <h2 className="addSpot">Add Skate Spot</h2>
+
+            <AddSpotForm />
+
+        </>
+    )
 }
 
 
