@@ -1,8 +1,11 @@
 import React from 'react';
 // import {useSelector} from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
 
 function AllSkatePage() {
     const dispatch = useDispatch();
@@ -12,30 +15,33 @@ function AllSkatePage() {
     //   const allSkate = useSelector((store) => store.allSkateReducer);
 
 
+
+
     //get user skate spots from db
     useEffect(() => {
         dispatch({ type: 'FETCH_ITEMS' });
     }, []);
 
-    //   //delete user skate spot 
-    //   const handleDelete = (item) => {
-    //     dispatch({ type: 'DELETE_ITEM', payload: item })
-    //   }
+
+    const onLike = (item) => {
+        //dispatch to saga
+        //saga needs ot make PUT request 
+        //know the item id 
 
 
-    //   const routeChange = () => {
-    //     let path = `addSpotPage`;
-    //     history.push(path);
-    //   }
-    //   const toEditPage = (item) => {
-    //     console.log('clicked me', item)
-    //     dispatch({ type: 'SET_SELECTED_ITEM', payload: item });
-    //     history.push('/editPage')
-    // }
+
+    }
+
+    //function to send new item to the saga, then to the reducer
+    const addLike = (event) => {
+        event.preventDefault();
+        dispatch({ type: 'ADD_ITEM', payload: newItem });
+        console.log(`clicked, added a new item`);
+    };
+
 
     return (
         <div>
-            {/* <button onClick={routeChange}>Add New Skate Spot</button> */}
 
             <h2>Your Skate Feed</h2>
 
@@ -52,6 +58,9 @@ function AllSkatePage() {
 
                     <h3>Comments</h3>
                     <h4>{item.comments}</h4>
+
+                    <Button onClick={() => onLike(item)} variant="contained">Likes {item.likes}</Button>
+                    {/* {likeCount} */}
 
 
 

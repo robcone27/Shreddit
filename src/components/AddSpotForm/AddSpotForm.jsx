@@ -5,6 +5,10 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './AddSpotForm.css';
 
+
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+
 function AddSpotForm() {
 
     //initialize dispatch 
@@ -40,34 +44,48 @@ function AddSpotForm() {
     }
 
     return (<>
-    <div className="formPanel">
+    <div>
+    {/* <div className="formPanel"> */}
+    
         <form onSubmit={addNewItem}>
-            <input
+        <div className="test">
+            <TextField  id="" label="Comments" variant="filled"
                 placeholder="comments"
                 type="text"
                 value={newItem.comments}
                 onChange={(event) => handlePropertyChange(event, 'comments')}
             />
-            <input
+           </div>
+
+           <div className="test">
+           <TextField id="" label="Pic" variant="filled"
                 placeholder="image_url"
                 type="text"
                 value={newItem.image_url}
                 onChange={(event) => handlePropertyChange(event, 'image_url')}
             />
-            <input
+           </div>
+
+           <div className="test">
+           <TextField id="" label="Address" variant="filled"
                 placeholder="address"
                 type="text"
                 value={newItem.address}
                 onChange={(event) => handlePropertyChange(event, 'address')}
             />
+            </div>
+
+
+
             <Stack spacing={8} direction="row">
             <Button variant="contained" type="submit">Add Spot</Button>
             <Button variant="contained" onClick={routeChange}>Cancel</Button>
             </Stack>
+            
         </form>
 </div>
     </>
-    )
+    );
 }
 
 

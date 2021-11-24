@@ -9,15 +9,16 @@ const {
     rejectUnauthenticated,
 } = require('../modules/authentication-middleware');
 
+//PUT**************
+//sql to update like 
+
+
 
 
 router.get('/', rejectUnauthenticated, (req, res) => {
     console.log(req.user);
         let queryText = `SELECT * FROM "item"
         WHERE "user_id" = $1;`;
-    
-        //this is where i need to change querytext to show individual 
-        //keep this code above to show all spots 
     
         pool
             .query(queryText, [req.user.id])

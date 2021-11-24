@@ -47,7 +47,6 @@ function UpdateForm() {
         history.push(path);
     }
     //ADD AN ITEM FORM 
-console.log("this is update", itemDetails);
     return (<>
         <h2>Update Skate Spot</h2>
         <form onSubmit={runUpdateItem}>

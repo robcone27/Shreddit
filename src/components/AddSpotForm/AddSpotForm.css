@@ -1,4 +1,4 @@
-.formPanel {
+/* .formPanel {
     box-sizing: border-box;
     width: 400px;
     max-width: 100%;
@@ -7,4 +7,14 @@
     background-color: #efefef;
     border-radius: 3px;
     box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+  } */
+
+
+  /* .subDiv {
+    padding: 80px;
+  }  */
+
+  .test {
+    padding: 20px;
+    text-align: center;
   }

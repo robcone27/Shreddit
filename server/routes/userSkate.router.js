@@ -8,16 +8,10 @@ const {
 } = require('../modules/authentication-middleware');
 
 
-/**
- * Get all of the items on the shelf
- */
-// this is actually /api/shelf
+//Gets all items from DB
 router.get('/', rejectUnauthenticated, (req, res) => {
 console.log(req.user);
     let queryText = `SELECT * FROM "item";`;
-
-    //this is where i need to change querytext to show individual 
-    //keep this code above to show all spots 
 
     pool
         .query(queryText)
@@ -47,9 +41,9 @@ router.post('/', (req, res) => {
             console.log('error in query', error);
             res.sendStatus(500);
         })
-    // endpoint functionality
 });
 
+//Deletes skate spot from DB
 router.delete('/:id', (req, res) => {
 
     console.log('comparing to item user id', req.params.id)
