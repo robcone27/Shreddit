@@ -60,8 +60,7 @@ function FunTimes() {
                     <Card sx={{ maxWidth: 400 }}>
                     <CardActions>
                     
-                    {/* <Button size="small">Share</Button>
-                    <Button size="small">Learn More</Button> */}
+                 
                 </CardActions>
                         <CardMedia
                             component="img"
@@ -85,8 +84,9 @@ function FunTimes() {
                         </CardContent>
                         <CardActions>
                     
-                            {/* <Button size="small">Share</Button>
-                            <Button size="small">Learn More</Button> */}
+                            <Button size="small">Likes {item.likes}</Button>
+                            {/* <Button size="small">Learn More</Button> */}
+                            
                         </CardActions>
                     </Card>
 

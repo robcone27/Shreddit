@@ -17,10 +17,13 @@ const {
 
 router.get('/', rejectUnauthenticated, (req, res) => {
     console.log(req.user);
-        let queryText = `SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
+        let queryText = `SELECT * FROM "item"
+        WHERE "user_id" = $1;`;
 
         // `SELECT * FROM "item"
         // WHERE "user_id" = $1;`;
+
+        // `SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
     
         pool
             .query(queryText, [req.user.id])

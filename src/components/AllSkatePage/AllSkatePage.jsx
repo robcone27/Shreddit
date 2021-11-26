@@ -50,6 +50,7 @@ function AllSkatePage() {
             {skateSpot.map((item) => (
                 // <Item key={item.id} item={item} />
                 <div>
+                    <p>{item.username}</p>
                     {/* <h2>Welcome, {user.username}</h2> */}
                     <h3>Address</h3>
                     <h4>{item.address}</h4>

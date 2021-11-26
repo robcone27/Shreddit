@@ -11,7 +11,10 @@ const {
 //Gets all items from DB
 router.get('/', rejectUnauthenticated, (req, res) => {
 console.log(req.user);
-    let queryText = `SELECT * FROM "item";`;
+    let queryText =`SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
+    
+    // `SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
+    // `SELECT * FROM "item";`;
 
     pool
         .query(queryText)
