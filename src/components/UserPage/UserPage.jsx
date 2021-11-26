@@ -3,6 +3,7 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import {useSelector} from 'react-redux';
 import TestPage from '../TestPage/TestPage';
 import './UserPage.css';
+import FunTimes from '../FunTimes/FunTimes';
 
 function UserPage() {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
@@ -14,7 +15,8 @@ function UserPage() {
       {/* <LogOutButton className="btn" /> */}
     </div>
     <div className="userFeed">
-        <TestPage />
+        {/* <TestPage /> */}
+        <FunTimes />
         </div>
         </>
   );

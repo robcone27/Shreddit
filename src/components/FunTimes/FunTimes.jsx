@@ -41,11 +41,13 @@ function FunTimes() {
             {/* <button onClick={routeChange}>Add New Skate Spot</button> */}
             {/* <Button variant="contained" onClick={routeChange}>Add New Skate Spot</Button> */}
 
-            <h2>Your Skate Spots</h2>
-          
-                <Button variant="contained" onClick={routeChange}>Add New Skate Spot</Button>
-          
+         
 
+            <div className="addSpotButton">
+                <Button variant="contained" onClick={routeChange}>Add New Skate Spot</Button>
+            </div>
+
+            <h2 className="yourSkate">Your Skate Spots</h2>
             {allSkate.map((item) => (
 
                 <div className="ohhYeah">
@@ -58,17 +60,17 @@ function FunTimes() {
 
 
                     <Card sx={{ maxWidth: 400 }}>
-                    <CardActions>
-                    
-                 
-                </CardActions>
+                        <CardActions>
+
+
+                        </CardActions>
                         <CardMedia
                             component="img"
                             height="200"
                             image={item.image_url} onClick={() => toEditPage(item)}
                             alt="skate spot"
                         />
-                        
+
                         <CardContent className="skateCard">
                             <Typography className="skateColor1" variant="body2" >
                                 Address
@@ -83,10 +85,10 @@ function FunTimes() {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                    
+
                             <Button size="small">Likes {item.likes}</Button>
                             {/* <Button size="small">Learn More</Button> */}
-                            
+
                         </CardActions>
                     </Card>
 

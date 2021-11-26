@@ -27,10 +27,13 @@ function UpdateForm() {
     // //function to send new item to the saga, then to the reducer
     const runUpdateItem = (event) => {
         event.preventDefault();
+        const response = confirm("Do you want to update this spot?")
+        if (response === true) {
         let path = `/home`;
         dispatch({ type: 'UPDATE_ITEM', payload: spot });
         console.log(`clicked, added a new item`, spot);
         history.push(path);
+        }
     };
 
     // change path on cancel back to home page 
