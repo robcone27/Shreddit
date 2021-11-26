@@ -43,24 +43,31 @@ function UpdateForm() {
         <h2>Update Skate Spot</h2>
 
         <form onSubmit={runUpdateItem}>
+          
+          <div className="formText">
             <TextField fullWidth label="Comments" id="fullWidth" variant="filled"
-                // placeholder="comments"
                 type="text"
                 value={spot.comments}
                 onChange={(event) => handlePropertyChange(event, 'comments')}
             />
+            </div>
+
+            <div className="formText">
             <TextField fullWidth label="Picture" id="fullWidth" variant="filled"
-                // placeholder="image_url"
                 type="text"
                 value={spot.image_url}
                 onChange={(event) => handlePropertyChange(event, 'image_url')}
             />
+            </div>
+
+            <div className="formText">
             <TextField fullWidth label="Address" id="fullWidth" variant="filled"
-                placeholder="address"
                 type="text"
                 value={spot.address}
                 onChange={(event) => handlePropertyChange(event, 'address')}
             />
+            </div>
+            
             <div className="updateFormButtons">
                 {/* <button type="submit">Update</button> */}
                 <Button variant="contained" type="submit">Update</Button>
