@@ -19,6 +19,7 @@ function AllSkatePage() {
     // const user = useSelector((store) => store.user);
     const skateSpot = useSelector((store) => store.userSkateReducer);
     //   const allSkate = useSelector((store) => store.allSkateReducer);
+    const [likeCount, setLikeCount] = useState(0);
 
 
 
@@ -29,15 +30,10 @@ function AllSkatePage() {
     }, []);
 
 
-    const onLike = (item) => {
-        //dispatch to saga
-        //saga needs ot make PUT request 
-        //know the item id 
-
-
-
-    }
-
+    const onLike = () => {
+        console.log('clicked');
+        setLikeCount(likeCount + 1);
+      }
     //function to send new item to the saga, then to the reducer
     const addLike = (event) => {
         event.preventDefault();
@@ -79,7 +75,10 @@ function AllSkatePage() {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Likes </Button>
+                {/* <Button onClick={onLike} variant="contained">Likes</Button> */}
+                <Button onClick={onLike} size="small">Likes {likeCount} </Button>
+      {/* <p>{likeCount} likes</p> */}
+
                 </CardActions>
             </Card>
 </div>

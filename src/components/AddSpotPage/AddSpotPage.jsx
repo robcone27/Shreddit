@@ -8,9 +8,9 @@ function AddSpotPage() {
 
     return (
         <>
-            <div className></div>
+            <div className="container">
             <h2 className="addSpot">Add Skate Spot</h2>
-
+            </div>
             <AddSpotForm />
 
         </>
