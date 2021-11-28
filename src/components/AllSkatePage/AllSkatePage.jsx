@@ -5,6 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import './AllSkatePage.css';
 
 
 function AllSkatePage() {
@@ -42,31 +48,51 @@ function AllSkatePage() {
 
     return (
         <div>
+ <div className="container">
+            <h2>Skate Feed</h2>
+            </div>
 
-            <h2>Your Skate Feed</h2>
+            
 
 
 
             {skateSpot.map((item) => (
-                // <Item key={item.id} item={item} />
-                <div>
-                    <p>{item.username}</p>
-                    {/* <h2>Welcome, {user.username}</h2> */}
-                    <h3>Address</h3>
-                    <h4>{item.address}</h4>
+                <div className="ohhYeah">
 
-                    <img src={item.image_url} alt="skate spot pic" />
+                    <Card sx={{ maxWidth: 400 }}>
+                        {/* <CardActions> */}
+                            <div className="userName">
+                            {item.username}
+                            </div>
 
-                    <h3>Comments</h3>
-                    <h4>{item.comments}</h4>
+                        {/* </CardActions> */}
+                        <CardMedia
+                            component="img"
+                            height="200"
+                            image={item.image_url}
+                            alt="skate spot"
+                        />
 
-                    <Button onClick={() => onLike(item)} variant="contained">Likes {item.likes}</Button>
-                    {/* {likeCount} */}
+                        <CardContent className="skateCard">
+                            <Typography className="skateColor1" variant="body2" >
+                                Address
 
+                            </Typography>
+                            <Typography className="skateColor" gutterBottom variant="h6" component="div">
+                                {item.address}
+                            </Typography>
+                            <Typography className="skateColor1" variant="body2" >
+                                {item.comments}
 
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
 
-                    {/* <button onClick={() =>handleDelete(item)}>Delete</button>
-          <img onClick={() =>toEditPage(item)} src={item.image_url} alt={item.comments} /> */}
+                            <Button size="small">Likes {item.likes}</Button>
+                            {/* <Button size="small">Learn More</Button> */}
+
+                        </CardActions>
+                    </Card>
 
                 </div>
             ))}

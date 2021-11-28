@@ -43,8 +43,9 @@ function UpdateForm() {
     }
     //ADD AN ITEM FORM 
     return (<>
+    <div className="container">
         <h2>Update Skate Spot</h2>
-
+</div>
         <form onSubmit={runUpdateItem}>
           
           <div className="formText">

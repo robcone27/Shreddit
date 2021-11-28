@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import './EditPage1.css';
+
 
 function EditPage1() {
     const history = useHistory();
@@ -14,11 +16,12 @@ function EditPage1() {
 
     //delete user skate spot and return to home page 
     const handleDelete = (itemDetails) => {
-      const response = confirm("Do you want to delete this spot?")
-      if (response === true){
-        dispatch({ type: 'DELETE_ITEM', payload: itemDetails })
-        let path = `/home`;
-        history.push(path);}
+        const response = confirm("Do you want to delete this spot?")
+        if (response === true) {
+            dispatch({ type: 'DELETE_ITEM', payload: itemDetails })
+            let path = `/home`;
+            history.push(path);
+        }
     }
 
     // change path on cancel back to home page 
@@ -26,36 +29,29 @@ function EditPage1() {
         let path = `/home`;
         history.push(path);
     }
-console.log(itemDetails)
+    console.log(itemDetails)
     return (<>
 
-     
-        <Button variant="contained" onClick={routeChange}>Back</Button>
-            
+
+
+
 
         <div>
-
-            <h3>Address</h3>
-            <h4>{itemDetails.address}</h4>
-
+            <div className="container1">
+                <h3>Address</h3>
+                <h4>{itemDetails.address}</h4>
+            </div>
             <img src={itemDetails.image_url} />
 
-            {/* <Stack spacing={12} direction="row">  
-            <Button variant="contained" onClick={() => {
-                history.push(`/updateForm/${itemDetails.id}`)
-            }}>Update</Button>
+            <h4 className="comments">{itemDetails.comments}</h4>
 
-            <Button variant="contained" onClick={() => handleDelete(itemDetails)}>Delete</Button>
-            </Stack>
-            <h3>Comments</h3> */}
-            <h4>{itemDetails.comments}</h4>
+            <Stack spacing={12} direction="row">
+                <Button variant="contained" onClick={() => {
+                    history.push(`/updateForm/${itemDetails.id}`)
 
-              <Stack spacing={12} direction="row">  
-            <Button variant="contained" onClick={() => {
-                history.push(`/updateForm/${itemDetails.id}`)
-            }}>Update</Button>
-
-            <Button variant="contained" onClick={() => handleDelete(itemDetails)}>Delete</Button>
+                }}>Update</Button>
+                <Button variant="contained" onClick={routeChange}>Back</Button>
+                <Button variant="contained" onClick={() => handleDelete(itemDetails)}>Delete</Button>
             </Stack>
         </div>
     </>

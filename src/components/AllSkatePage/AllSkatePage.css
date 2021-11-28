@@ -1,0 +1,18 @@
+.userName {
+    text-align: center;
+    /* margin-bottom: 0px; */
+    padding: 5px;
+    font-weight: bold;
+}
+
+.container {
+    padding-top: 2px;
+    padding-bottom: 2px;
+ text-align: center;
+    border-top: 6px solid red;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
+         margin-bottom: 20px;
+         background-color: dimgrey;
+} 

@@ -52,13 +52,6 @@ function FunTimes() {
 
                 <div className="ohhYeah">
 
-                    {/* <h3>Address</h3> */}
-                    {/* <h4>{item.address}</h4> */}
-                    {/* <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
-          <h4>{item.comments}</h4> */}
-
-
-
                     <Card sx={{ maxWidth: 400 }}>
                         <CardActions>
 
