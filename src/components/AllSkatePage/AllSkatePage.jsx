@@ -48,12 +48,41 @@ function AllSkatePage() {
 
     return (
         <div>
- <div className="container">
-            <h2>Skate Feed</h2>
+            <div className="container">
+                <h2>Skate Feed</h2>
             </div>
+            <div className="ohhYeah">
+            <Card sx={{ maxWidth: 400 }}>
+                {/* <CardActions> */}
+                <div className="userName">
+                    Rob C
+                </div>
 
-            
+                <CardMedia
+                    component="img"
+                    height="200"
+                    image="https://assets.vice.com/content-images/contentimage/no-slug/cd286eb2e50463cec2bb1536ca377baf.jpg"
+                    alt="skate spot"
+                />
 
+                <CardContent className="skateCard">
+                    <Typography className="skateColor1" variant="body2" >
+                        Address
+                    </Typography>
+
+                    <Typography className="skateText" gutterBottom variant="h6" component="div">
+                        236 Thomas Ave S Minneapolis, MN
+                    </Typography>
+
+                    <Typography className="skateColor1" variant="body2" >
+                        Awesome bank to skate
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <Button size="small">Likes </Button>
+                </CardActions>
+            </Card>
+</div>
 
 
             {skateSpot.map((item) => (
@@ -61,9 +90,9 @@ function AllSkatePage() {
 
                     <Card sx={{ maxWidth: 400 }}>
                         {/* <CardActions> */}
-                            <div className="userName">
+                        <div className="userName">
                             {item.username}
-                            </div>
+                        </div>
 
                         {/* </CardActions> */}
                         <CardMedia
@@ -76,21 +105,20 @@ function AllSkatePage() {
                         <CardContent className="skateCard">
                             <Typography className="skateColor1" variant="body2" >
                                 Address
-
                             </Typography>
+
                             <Typography className="skateColor" gutterBottom variant="h6" component="div">
                                 {item.address}
                             </Typography>
+
                             <Typography className="skateColor1" variant="body2" >
                                 {item.comments}
-
                             </Typography>
+
                         </CardContent>
+
                         <CardActions>
-
                             <Button size="small">Likes {item.likes}</Button>
-                            {/* <Button size="small">Learn More</Button> */}
-
                         </CardActions>
                     </Card>
 
