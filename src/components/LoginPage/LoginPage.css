@@ -1,5 +1,12 @@
 .login {
-background-image: url(https://coresites-cdn-adm.imgix.net/kingpin_new/wp-content/uploads/2014/11/mike-york-backside-180-nosegrind1.jpg?fit=crop)
-;
+background-blend-mode: hue;
+background-image: url(https://skateboardinginfo.com/wp-content/uploads/2020/10/best-skate-spots-in-california-best-skate-spots-in-america-3.jpg);
 
+/* background-color: grey; */
+width: 260px;
+height: 450px;
+
+opacity: 0.6px;
+padding: 50px;
+margin: 20px;
 }

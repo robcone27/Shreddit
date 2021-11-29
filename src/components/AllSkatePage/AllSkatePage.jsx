@@ -19,7 +19,7 @@ function AllSkatePage() {
     // const user = useSelector((store) => store.user);
     const skateSpot = useSelector((store) => store.userSkateReducer);
     //   const allSkate = useSelector((store) => store.allSkateReducer);
-    const [likeCount, setLikeCount] = useState(0);
+    const [likeCount, setLikeCount] = useState(3);
 
 
 
