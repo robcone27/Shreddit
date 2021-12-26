@@ -2,12 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 import './AddSpotForm.css';
-
-
-
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 function AddSpotForm() {
@@ -47,11 +42,11 @@ function AddSpotForm() {
 
     return (<>
         <div>
-   
+
             <form onSubmit={addNewItem}>
-           
+
                 <div className="test">
-                <TextField fullWidth label="Comments" id="fullWidth" variant="filled"
+                    <TextField fullWidth label="Comments" id="fullWidth" variant="filled"
                         // placeholder="comments"
                         type="text"
                         value={newItem.comments}
@@ -60,7 +55,7 @@ function AddSpotForm() {
                 </div>
 
                 <div className="test">
-                <TextField fullWidth label="Picture" id="fullWidth" variant="filled"
+                    <TextField fullWidth label="Picture" id="fullWidth" variant="filled"
                         // placeholder="image_url"
                         type="text"
                         value={newItem.image_url}
@@ -69,7 +64,7 @@ function AddSpotForm() {
                 </div>
 
                 <div className="test">
-                <TextField fullWidth label="Address" id="fullWidth" variant="filled"
+                    <TextField fullWidth label="Address" id="fullWidth" variant="filled"
                         placeholder=""
                         type="text"
                         value={newItem.address}
@@ -77,23 +72,17 @@ function AddSpotForm() {
                     />
                 </div>
 
+                <div className="addSpotFormButtons">
+                    <Button variant="contained" type="submit">Add Spot</Button>
+                </div>
 
                 <div className="addSpotFormButtons">
-                    {/* <Stack spacing={8} direction="row">  */}
-                        <Button variant="contained" type="submit">Add Spot</Button>
-                        </div>
-
-                        <div className="addSpotFormButtons">
-                        <Button variant="contained" onClick={routeChange}>Cancel</Button>
-                    {/* </Stack> */}
+                    <Button variant="contained" onClick={routeChange}>Cancel</Button>
                 </div>
             </form>
-   \
         </div>
-       
     </>
     );
 }
-
 
 export default AddSpotForm;

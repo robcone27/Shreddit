@@ -9,31 +9,21 @@ const {
     rejectUnauthenticated,
 } = require('../modules/authentication-middleware');
 
-//PUT**************
-//sql to update like 
-
-
-
-
+//Gets all items for every user
 router.get('/', rejectUnauthenticated, (req, res) => {
     console.log(req.user);
-        let queryText = `SELECT * FROM "item"
+    let queryText = `SELECT * FROM "item"
         WHERE "user_id" = $1;`;
 
-        // `SELECT * FROM "item"
-        // WHERE "user_id" = $1;`;
+    pool
+        .query(queryText, [req.user.id])
+        .then((response) => {
+            res.send(response.rows); // response.rows contains all the items
+        })
+        .catch((error) => {
+            console.log(`There was an error with the /api/userSkateSpot GET:`, error);
+            res.sendStatus(500); // there was an error
+        });
+});
 
-        // `SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
-    
-        pool
-            .query(queryText, [req.user.id])
-            .then((response) => {
-                res.send(response.rows); // response.rows contains all the items
-            })
-            .catch((error) => {
-                console.log(`There was an error with the /api/userSkateSpot GET:`, error);
-                res.sendStatus(500); // there was an error
-            });
-    });
-    
-    module.exports = router;
+module.exports = router;

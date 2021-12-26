@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function LoginForm() {
   const [username, setUsername] = useState('');
@@ -32,6 +32,7 @@ function LoginForm() {
           {errors.loginMessage}
         </h3>
       )}
+      
       <div>
         <label htmlFor="username">
           Username:
@@ -44,6 +45,7 @@ function LoginForm() {
           />
         </label>
       </div>
+      
       <div>
         <label htmlFor="password">
           Password:
@@ -56,6 +58,7 @@ function LoginForm() {
           />
         </label>
       </div>
+      
       <div>
         <input className="btn" type="submit" name="submit" value="Log In" />
       </div>

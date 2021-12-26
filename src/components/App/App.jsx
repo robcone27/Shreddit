@@ -5,14 +5,10 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-
 import { useDispatch, useSelector } from 'react-redux';
-
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
@@ -66,16 +62,16 @@ function App() {
           >
             <UserPage />
           </ProtectedRoute>
-//********************** */
-<ProtectedRoute
+
+          <ProtectedRoute
             // logged in shows UserPage else shows LoginPage
             exact
             path="/editPage"
           >
             <EditPage1 />
           </ProtectedRoute>
-  /******************************* */
-  <ProtectedRoute
+
+          <ProtectedRoute
             // logged in shows addPage else shows LoginPage
             exact
             path="/addSpotPage"
@@ -90,14 +86,14 @@ function App() {
           >
             <AllSkatePage />
           </ProtectedRoute>
- //******************************************** */    
- <ProtectedRoute
+
+          <ProtectedRoute
             // logged in shows addPage else shows LoginPage
             exact
             path="/funTimes"
           >
             <FunTimes />
-          </ProtectedRoute>     
+          </ProtectedRoute>
 
 
 
@@ -108,10 +104,7 @@ function App() {
           >
             <UpdateForm />
           </ProtectedRoute>
-          
-          
-          
-          
+
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact

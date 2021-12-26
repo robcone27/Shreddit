@@ -36,26 +36,18 @@ function TestPage() {
 
   return (
     <div>
-      {/* <button onClick={routeChange}>Add New Skate Spot</button> */}
       <Button variant="contained" onClick={routeChange}>Add New Skate Spot</Button>
-
       <h2>Your Skate Spots</h2>
 
-
-
       {allSkate.map((item) => (
-   
         <div>
-         
           <h3>Address</h3>
           <h4>{item.address}</h4>
           <img onClick={() => toEditPage(item)} src={item.image_url} alt={item.comments} />
           <h4>{item.comments}</h4>
           <h5>likes {item.likes}</h5>
-          
         </div>
       ))}
-
     </div>
   );
 }

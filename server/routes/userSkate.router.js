@@ -10,16 +10,13 @@ const {
 
 //Gets all items from DB
 router.get('/', rejectUnauthenticated, (req, res) => {
-console.log(req.user);
-    let queryText =`SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
-    
-    // `SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
-    // `SELECT * FROM "item";`;
+    console.log(req.user);
+    let queryText = `SELECT * FROM "item" JOIN "user" ON "item"."user_id" = "user"."id";`;
 
     pool
         .query(queryText)
         .then((response) => {
-            res.send(response.rows); // response.rows contains all the items
+            res.send(response.rows); // response.rows contains all user items
         })
         .catch((error) => {
             console.log(`There was an error with the /api/userSkateSpot GET:`, error);
@@ -50,7 +47,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
 
     console.log('comparing to item user id', req.params.id)
-    let id = req.params.id //This our way of identifying the variable 'id' sent along with the route.
+    let id = req.params.id 
     let queryText = `
     DELETE FROM "item"
     WHERE id = $1;`;

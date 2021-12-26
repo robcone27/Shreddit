@@ -13,7 +13,6 @@ function EditPage1() {
     const dispatch = useDispatch();
     // const [spot, setSpot] = useState(itemDetails)
 
-
     //delete user skate spot and return to home page 
     const handleDelete = (itemDetails) => {
         const response = confirm("Do you want to delete this spot?")
@@ -31,16 +30,12 @@ function EditPage1() {
     }
     console.log(itemDetails)
     return (<>
-
-
-
-
-
         <div>
             <div className="container1">
                 <h3>Address</h3>
                 <h4>{itemDetails.address}</h4>
             </div>
+
             <img src={itemDetails.image_url} />
 
             <h4 className="comments">{itemDetails.comments}</h4>
@@ -48,14 +43,12 @@ function EditPage1() {
             <Stack spacing={12} direction="row">
                 <Button variant="contained" onClick={() => {
                     history.push(`/updateForm/${itemDetails.id}`)
-
                 }}>Update</Button>
                 <Button variant="contained" onClick={routeChange}>Back</Button>
                 <Button variant="contained" onClick={() => handleDelete(itemDetails)}>Delete</Button>
             </Stack>
         </div>
     </>
-
     )
 }
 
