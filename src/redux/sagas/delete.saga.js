@@ -1,4 +1,4 @@
-import {put, takeLatest} from 'redux-saga/effects';
+import { put, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
 
 function* deleteItem(action) {
@@ -6,12 +6,11 @@ function* deleteItem(action) {
         //When DELETE_ITEM is called, takes in action parameter, which has the id of the item to delete
         console.log(action.payload)
         yield axios.delete(`/api/skateSpots/${action.payload.id}`)
-        // console.log(action.payload)
         //Call FETCH_ITEMS to rerender page 
-        yield put({type: 'FETCH_USER_ITEMS'})
+        yield put({ type: 'FETCH_USER_ITEMS' })
     } catch (err) {
         console.log('Error in deleteItem', err);
-        yield put({type: 'DELETE_ERROR' })
+        yield put({ type: 'DELETE_ERROR' })
     }
 };
 

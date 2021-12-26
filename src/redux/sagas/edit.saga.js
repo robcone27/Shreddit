@@ -5,12 +5,10 @@ import axios from 'axios';
 
 function* editSaga(action) {
     try {
-        //selected movie, action.payload will be selected move from /details
+        //selected item, action.payload will be selected move from /details
         const item = action.payload;
-        console.log('start of edit saga',item.id);
-        // console.log('IN SELECTED MOVIE', movie);
+        console.log('start of edit saga', item.id);
         const itemDetails = yield axios.get(`/api/editPage/${action.payload.item_id}`);
-        // console.log('IN FUNCTION', movieDetails);
         console.log(itemDetails);
         yield put({ type: 'SET_ITEM_DETAIL', payload: itemDetails.data })
     } catch (error) {
@@ -19,19 +17,17 @@ function* editSaga(action) {
 }
 
 function* updateItem(action) {
-    try{
-    yield axios.put(`/api/editPage/${action.payload.id}`, action.payload)
-    yield put({ type: 'FETCH_ITEM' });
-}catch (err) {
-    
-    console.log('PUT error in saga', err)
-}
-}
- 
-function* editSagaListener(){
-// yield takeLatest('SET_SELECTED_ITEM', editSaga);
-yield takeLatest('UPDATE_ITEM', updateItem);
+    try {
+        yield axios.put(`/api/editPage/${action.payload.id}`, action.payload)
+        yield put({ type: 'FETCH_ITEM' });
+    } catch (err) {
+        console.log('PUT error in saga', err)
+    }
 }
 
+function* editSagaListener() {
+    // yield takeLatest('SET_SELECTED_ITEM', editSaga);
+    yield takeLatest('UPDATE_ITEM', updateItem);
+}
 
 export default editSagaListener
