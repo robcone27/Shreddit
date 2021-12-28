@@ -26,18 +26,18 @@ After user is logged in they will be able to
 - Scroll through the own personal feed.
 - View how many likes their skate spot have from other users
 
-![media/editPage.png](media/editPage.png)
+![media/edit2.png](media/edit2.png)
 
-<!-- Once a existing skate spot image is tapped on the user can
+Once a existing skate spot image is tapped on the user can
 update information about the skate spot or choose to delete it.
 If delete is tapped user will be asked to confirm decision and
-be brought back to the users home feed. -->
+be brought back to the users home feed.
 
-![media/update1.png](media/update.png)
+![media/update2.png](media/update2.png)
 
-<!-- If update is tapped the user can change the information about 
+If update is tapped the user can change the information about 
 the skate spot. If confirmed changes will be made and the user
-will be brought back to the users home feed. -->
+will be brought back to the users home feed.
 
 
 ## Prerequisites
