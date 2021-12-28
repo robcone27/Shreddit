@@ -9,7 +9,7 @@ const {
     rejectUnauthenticated,
 } = require('../modules/authentication-middleware');
 
-//Gets all items for every user
+//Gets all items for selected user
 router.get('/', rejectUnauthenticated, (req, res) => {
     console.log(req.user);
     let queryText = 
