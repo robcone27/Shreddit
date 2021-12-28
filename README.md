@@ -9,6 +9,13 @@ Skateboarders are able to log in, create a profile, upload pictures and location
 
 Users are expected to interact with this with this application on mobile device.
 
+## Screenshots
+
+![media/login.png](media/login.png)
+_Login._
+
+
+
 ## Prerequisites
 
 Before you get started, make sure you have the following software installed on your computer:
