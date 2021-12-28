@@ -11,7 +11,7 @@ Users are expected to interact with this with this application on mobile device.
 
 ## Screenshots
 
-![media/login.png](media/login.png)
+![media/login1.png](media/login1.png)
 _Login._
 
 
