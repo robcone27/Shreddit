@@ -13,11 +13,15 @@ Users are expected to interact with this with this application on mobile device.
 
 ![media/login2.png](media/login2.png)
 
-_Login._
+Login.
 
 ![media/userLogged.png](media/userLogged.png)
 
-_After user is logged in they will be able to_  
+_After user is logged in they will be able to_
+- Add a new skate spot.
+- Edit existing skate spots by tapping on pictures.
+- View feed of all users skate spots.
+- Scroll through the own personal feed.
 ## Prerequisites
 
 Before you get started, make sure you have the following software installed on your computer:
