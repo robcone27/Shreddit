@@ -12,9 +12,11 @@ Users are expected to interact with this with this application on mobile device.
 ## Screenshots
 
 ![media/login2.png](media/login2.png)
+
 _Login._
 
-![userLogged.png](userLogged.png)
+![media/userLogged.png](media/userLogged.png)
+
 _After user is logged in they will be able to_  
 ## Prerequisites
 
