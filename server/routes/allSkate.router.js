@@ -12,8 +12,11 @@ const {
 //Gets all items for every user
 router.get('/', rejectUnauthenticated, (req, res) => {
     console.log(req.user);
-    let queryText = `SELECT * FROM "item"
-        WHERE "user_id" = $1;`;
+    let queryText = 
+    `SELECT * FROM "item"
+    WHERE "user_id" = $1
+    ORDER BY "id" DESC;`
+        ;
 
     pool
         .query(queryText, [req.user.id])

@@ -5,6 +5,9 @@ import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import './EditPage1.css';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
+
 
 
 function EditPage1() {
@@ -13,7 +16,7 @@ function EditPage1() {
     const dispatch = useDispatch();
     // const [spot, setSpot] = useState(itemDetails)
 
-    //delete user skate spot and return to home page 
+    // delete user skate spot and return to home page 
     const handleDelete = (itemDetails) => {
         const response = confirm("Do you want to delete this spot?")
         if (response === true) {
@@ -22,6 +25,19 @@ function EditPage1() {
             history.push(path);
         }
     }
+
+    // const handleDelete = (itemDetails) => {
+    //     <Alert severity="warning">
+    //     <AlertTitle>Warning</AlertTitle>
+    //     This is a warning alert — <strong>check it out!</strong>
+    //   </Alert>
+    //     const response = confirm("Do you want to delete this spot?")
+    //     if (response === true) {
+    //         dispatch({ type: 'DELETE_ITEM', payload: itemDetails })
+    //         let path = `/home`;
+    //         history.push(path);
+    //     }
+    // }
 
     // change path on cancel back to home page 
     const routeChange = () => {
