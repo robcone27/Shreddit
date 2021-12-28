@@ -11,8 +11,8 @@ const {
 //Gets all items from DB
 router.get('/', rejectUnauthenticated, (req, res) => {
     console.log(req.user);
-    let queryText = 
-    `SELECT * FROM "item" 
+    let queryText =
+        `SELECT * FROM "item" 
     JOIN "user" ON "item"."user_id" = "user"."id"
     ORDER BY RANDOM ();`;
 
@@ -50,7 +50,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
 
     console.log('comparing to item user id', req.params.id)
-    let id = req.params.id 
+    let id = req.params.id
     let queryText = `
     DELETE FROM "item"
     WHERE id = $1;`;
