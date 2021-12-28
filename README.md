@@ -38,15 +38,15 @@ be brought back to the users home feed.
 If update is tapped the user can change the information about 
 the skate spot. If confirmed changes will be made and the user
 will be brought back to the users home feed.
-
+ 
 
 ## Prerequisites
-
+yooooooooooooooooooooo
 Before you get started, make sure you have the following software installed on your computer:
 
-- [Node.js](https://nodejs.org/en/)
+<!-- - [Node.js](https://nodejs.org/en/)
 - [PostrgeSQL](https://www.postgresql.org/)
-- [Nodemon](https://nodemon.io/)
+- [Nodemon](https://nodemon.io/) -->
 
 ## Create database and table
 
