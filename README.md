@@ -7,7 +7,7 @@ _Duration: Two Weeks Challenge_
 
 Skateboarders are able to log in, create a profile, upload pictures and locations of skateboarding spots, as well as add comments and updates for other skateboarders.
 
-Users are expected to interact with this with this application on mobile device.
+Users are expected to interact with this application on a mobile device.
 
 ## Screenshots
 
@@ -17,11 +17,29 @@ Login.
 
 ![media/userLogged.png](media/userLogged.png)
 
-_After user is logged in they will be able to_
+![media/scroll.png](media/scroll.png)
+
+After user is logged in they will be able to
 - Add a new skate spot.
 - Edit existing skate spots by tapping on pictures.
 - View feed of all users skate spots.
 - Scroll through the own personal feed.
+- View how many likes their skate spot have from other users
+
+![media/editPage.png](media/editPage.png)
+
+Once a existing skate spot image is tapped on the user can
+update information about the skate spot or choose to delete it.
+If delete is tapped user will be asked to confirm decision and
+be brought back to the users home feed.
+
+![media/update.png](media/update.png)
+
+If update is tapped the user can change the information about 
+the skate spot. If confirmed changes will be made and the user
+will be brought back to the users home feed.
+
+
 ## Prerequisites
 
 Before you get started, make sure you have the following software installed on your computer:
