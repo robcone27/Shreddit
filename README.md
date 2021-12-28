@@ -33,7 +33,7 @@ update information about the skate spot or choose to delete it.
 If delete is tapped user will be asked to confirm decision and
 be brought back to the users home feed.
 
-![media/update.png](media/update.png)
+![media/update1.png](media/update.png)
 
 If update is tapped the user can change the information about 
 the skate spot. If confirmed changes will be made and the user
