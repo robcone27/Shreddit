@@ -14,8 +14,8 @@ Users are expected to interact with this with this application on mobile device.
 ![media/login2.png](media/login2.png)
 _Login._
 
-![media/user_logged_in.png] (media/user_logged_in.png)
-test test test 
+![userLogged.png](userLogged.png)
+_After user is logged in they will be able to_  
 ## Prerequisites
 
 Before you get started, make sure you have the following software installed on your computer:
