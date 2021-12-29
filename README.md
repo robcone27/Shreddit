@@ -19,42 +19,45 @@ Login.
 
 ![media/scroll.png](media/scroll.png)
 
-After user is logged in they will be able to.
+After a user is logged in they will be able to.
 - Add a new skate spot.
 - Edit existing skate spots by tapping on pictures.
 - View feed of all user skate spots.
 - Scroll through their own personal feed.
 - View how many likes their skate spots have from other users.
-
+ 
 ![media/addSpot.png](media/addSpot.png)
-
-If add spot is tapped on the user will be brought to this page where they can add in comments, a image and address. Once user clicks add and confirms information the spot will be added to their home feed and all user feed.
-
+ 
+If add spot is tapped on the user will be brought to this page where they can add in comments, an image and address. Once a user clicks add and confirms information the spot will be added to their home feed and all user feed.
+ 
 ![media/edit2.png](media/edit2.png)
-
+ 
 Once an existing skate spot image is tapped on the user can
 update information about the skate spot or choose to delete it.
 If delete is tapped user will be asked to confirm decision and
-be brought back to the users home feed.
-
-![media/update2.png](media/update2.png)
-
-If update is tapped the user can change the information about 
-the skate spot. If confirmed changes will be made and the user
-will be brought back to the users home feed.
+be brought back to the user's home feed.
  
+![media/update2.png](media/update2.png)
+ 
+If update is tapped the user can change the information about
+the skate spot. If confirmed changes will be made and the user
+will be brought back to the user's home feed.
+
+![media/allUser.png](media/allUser.png)
+ 
+If a user taps on Feed from the Navigation bar they will be able to view all other user skate spots they added, be able to like the spots and find out where it is located. They can get back to their personal feed by pressing home on the navigation bar.
 
 ## Prerequisites
 
 Before you get started, make sure you have the following software installed on your computer:
 
-<!-- - [Node.js](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/)
 - [PostrgeSQL](https://www.postgresql.org/)
-- [Nodemon](https://nodemon.io/) -->
+- [Nodemon](https://nodemon.io/)
 
 ## Create database and table
 
-Create a new database called `prime_app` and create a `user` table:
+Create a new database called `shreddit` and create a `user` table:
 
 ```SQL
 CREATE TABLE "user" (
