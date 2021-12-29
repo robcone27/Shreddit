@@ -19,16 +19,20 @@ Login.
 
 ![media/scroll.png](media/scroll.png)
 
-After user is logged in they will be able to
+After user is logged in they will be able to.
 - Add a new skate spot.
 - Edit existing skate spots by tapping on pictures.
-- View feed of all users skate spots.
-- Scroll through the own personal feed.
-- View how many likes their skate spot have from other users
+- View feed of all user skate spots.
+- Scroll through their own personal feed.
+- View how many likes their skate spots have from other users.
+
+![media/addSpot.png](media/addSpot.png)
+
+If add spot is tapped on the user will be brought to this page where they can add in comments, a image and address. Once user clicks add and confirms information the spot will be added to their home feed and all user feed.
 
 ![media/edit2.png](media/edit2.png)
 
-Once a existing skate spot image is tapped on the user can
+Once an existing skate spot image is tapped on the user can
 update information about the skate spot or choose to delete it.
 If delete is tapped user will be asked to confirm decision and
 be brought back to the users home feed.
@@ -41,7 +45,7 @@ will be brought back to the users home feed.
  
 
 ## Prerequisites
-yooooooooooooooooooooo
+
 Before you get started, make sure you have the following software installed on your computer:
 
 <!-- - [Node.js](https://nodejs.org/en/)
