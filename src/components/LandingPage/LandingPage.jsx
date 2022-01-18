@@ -14,7 +14,9 @@ function LandingPage() {
   };
 
   return (
+    
     <div className="container">
+       {/* <div className="execute"> */}
       <h2>{heading}</h2>
 
       <div className="grid">
@@ -22,16 +24,19 @@ function LandingPage() {
           
         </div>
         <div className="grid-col grid-col_4">
+         
           <RegisterForm />
-
+          </div>
           <center>
             <h4>Already a Member?</h4>
             <button className="btn btn_sizeSm" onClick={onLogin}>
               Login
             </button>
           </center>
+          
         </div>
-      </div>
+      
+    {/* </div> */}
     </div>
   );
 }
