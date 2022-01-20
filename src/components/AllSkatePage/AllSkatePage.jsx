@@ -34,7 +34,7 @@ function AllSkatePage() {
     };
 
     return (
-        <div>
+        <div className="execute">
             <div className="container">
                 <h2>Skate Feed</h2>
             </div>
