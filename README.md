@@ -9,7 +9,6 @@ Skateboarders are able to log in, create a profile, upload pictures and location
 
 Users are expected to interact with this application on a mobile device.
 
-A live version of the site is available at [calm-tor-90307.herokuapp.com/](https://calm-tor-90307.herokuapp.com/).
 
 ## Screenshots
 
